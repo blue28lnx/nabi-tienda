@@ -1,0 +1,217 @@
+{
+  "configuracion": {
+    "moneda": "$",
+    "whatsapp": "+541125981292",
+    "nombre_tienda": "Nabi"
+  },
+  "categorias": [
+    {
+      "id": "personalizados",
+      "nombre": "Productos Personalizados",
+      "icono": "fa-palette",
+      "descripcion": "Hechos a tu medida"
+    },
+    {
+      "id": "digitales",
+      "nombre": "Archivos Digitales",
+      "icono": "fa-id-card",
+      "descripcion": "Archivos editables e imprimibles"
+    }
+  ],
+  "destacados": [1, 102, 5, 3, 105],
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Remera Personalizada",
+      "precio": 30000,
+      "categoria": "personalizados",
+      "descripcion": "Remera 100% algodón con estampado personalizado. Ideal para regalar o usar en ocasiones especiales.",
+      "imagenes": [
+        "/img/productos/remeras/1.jpg",
+        "/img/productos/remeras/2.jpg",
+        "/img/productos/remeras/3.jpg",
+        "/img/productos/remeras/4.jpg",
+        "/img/productos/remeras/5.jpg",
+        "/img/productos/remeras/6.jpg",
+        "/img/productos/remeras/7.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Stickers de Vinilo Personalizados",
+      "precio": 500,
+      "categoria": "personalizados",
+      "descripcion": "Stickers resistentes al agua y al sol. Perfectos para termos, laptops y más. De 5cm a 8cm",
+      "imagenes": [
+        "/img/productos/stickers/1.jpg",
+        "/img/productos/stickers/2.jpg",
+        "/img/productos/stickers/3.jpg",
+        "/img/productos/stickers/4.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "Vasos Personalizados",
+      "precio": 18000,
+      "categoria": "personalizados",
+      "descripcion": "Vasos de vidrio. Personaliza con tu nombre o diseño favorito.",
+      "imagenes": [
+        "/img/productos/vasos/1.jpg",
+        "/img/productos/vasos/2.jpg",
+        "/img/productos/vasos/3.jpg",
+        "/img/productos/vasos/4.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "Totebag Personalizada",
+      "precio": 15000,
+      "categoria": "personalizados",
+      "descripcion": "Personaliza con tu nombre o diseño favorito.",
+      "imagenes": [
+        "/img/productos/tote/1.jpg",
+        "/img/productos/tote/2.jpg",
+        "/img/productos/tote/3.jpg",
+        "/img/productos/tote/4.jpg",
+        "/img/productos/tote/5.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "nombre": "Buzo Personalizado",
+      "precio": 45000,
+      "categoria": "personalizados",
+      "descripcion": "Buzos 100% algodón con estampado personalizado. Personaliza con tu nombre o diseño favorito.",
+      "imagenes": [
+        "/img/productos/buzos/1.jpg",
+        "/img/productos/buzos/2.jpg",
+        "/img/productos/buzos/3.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "nombre": "50 Stickers de Papel Personalizados",
+      "precio": 15000,
+      "categoria": "personalizados",
+      "descripcion": "50 Stickers de papel personalizados para tu emprendimiento. 5x5cm.",
+      "imagenes": [
+        "/img/productos/stickerspapel/1.jpg"
+      ]
+    },
+    {
+      "id": 7,
+      "nombre": "Mate Personalizado",
+      "precio": 6000,
+      "categoria": "personalizados",
+      "descripcion": "Mate de plastico personalizado como vos quieras.",
+      "imagenes": [
+        "/img/productos/mate/1.jpg"
+      ]
+    },
+    {
+      "id": 8,
+      "nombre": "Polaroid Personalizada",
+      "precio": 1000,
+      "categoria": "personalizados",
+      "descripcion": "Fotos Polaroid Personalizadas como vos quieras. Foto y marco personalizable. 9x13cm",
+      "imagenes": [
+        "/img/productos/polaroid/1.jpg"
+      ]
+    },
+    {
+      "id": 9,
+      "nombre": "Ticket Personalizado",
+      "precio": 2500,
+      "categoria": "personalizados",
+      "descripcion": "Entrada de tu artista favorito.",
+      "imagenes": [
+        "/img/productos/ticket/1.jpg"
+      ]
+    },
+    {
+      "id": 10,
+      "nombre": "Anotador Personalizado",
+      "precio": 4000,
+      "categoria": "personalizados",
+      "descripcion": "Anotador personalizado como vos quieras.",
+      "imagenes": [
+        "/img/productos/anotador/1.jpg"
+      ]
+    },
+    {
+      "id": 11,
+      "nombre": "Cuadro Personalizado",
+      "precio": 18000,
+      "categoria": "personalizados",
+      "descripcion": "Cuadro personalizado. 30x40cm",
+      "imagenes": [
+        "/img/productos/cuadro/1.jpg"
+      ]
+    },
+    {
+      "id": 12,
+      "nombre": "Gorra Personalizada",
+      "precio": 12000,
+      "categoria": "personalizados",
+      "descripcion": "Gorra personalizada como vos quieras.",
+      "imagenes": [
+        "/img/productos/gorra/1.jpg"
+      ]
+    },
+    {
+      "id": 13,
+      "nombre": "Poster Personalizado",
+      "precio": 8000,
+      "categoria": "personalizados",
+      "descripcion": "Poster personalizado tamaño A3.",
+      "imagenes": [
+        "/img/productos/poster/1.jpg",
+        "/img/productos/poster/2.jpg"
+      ]
+    },
+    {
+      "id": 14,
+      "nombre": "Encendedor Personalizado",
+      "precio": 2000,
+      "categoria": "personalizados",
+      "descripcion": "Encendedor personalizado.",
+      "imagenes": [
+        "/img/productos/encendedor/1.jpg",
+        "/img/productos/encendedor/2.jpg"
+      ]
+    },
+    {
+      "id": 15,
+      "nombre": "Mouse Pad Personalizado",
+      "precio": 6000,
+      "categoria": "personalizados",
+      "descripcion": "Mouse Pad personalizado. 21x19cm.",
+      "imagenes": [
+        "/img/productos/mousepad/1.jpg",
+        "/img/productos/mousepad/2.jpg",
+        "/img/productos/mousepad/3.jpg"
+      ]
+    },
+    {
+      "id": 16,
+      "nombre": "Agenda Perpetua Personalizada",
+      "precio": 8000,
+      "categoria": "personalizados",
+      "descripcion": "Diseño personalizado.",
+      "imagenes": [
+        "/img/productos/agendas/1.jpg",
+        "/img/productos/agendas/2.jpg"
+      ]
+    },
+    {
+      "id": 17,
+      "nombre": "Remera De Poliester Personalizada",
+      "precio": 10000,
+      "categoria": "personalizados",
+      "descripcion": "Remera de poliester sublimada con el diseño que vos quieras.",
+      "imagenes": [
+        "/img/productos/remerasubli/1.jpg"
+      ]
+    }
+  ]
+}
