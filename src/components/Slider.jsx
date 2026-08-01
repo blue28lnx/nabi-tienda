@@ -1,68 +1,46 @@
-import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useStore } from '../context/StoreContext';
 
 export default function Slider() {
   const { destacados, addToCart, formatPrice } = useStore();
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex(prev => (prev + 1) % Math.max(1, destacados.length));
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [destacados.length]);
-
-  const goTo = (i) => setCurrentIndex((i + destacados.length) % destacados.length);
 
   if (!destacados || destacados.length === 0) {
     return null;
   }
 
   return (
-    <section className="slider-section">
-      <h2 className="slider-title">Productos Destacados</h2>
-
-      <div className="slider-container">
-        <div 
-          className="slider-track" 
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-        >
-          {destacados.map(product => (
-            <div key={product.id} className="slider-item">
-              <img 
-                src={product.imagenes?.[0]} 
-                alt={product.nombre}
-                onError={(e) => e.target.src = '/img/logo.png'}
-              />
-              <h3>{product.nombre}</h3>
-              <p className="price">{formatPrice(product.precio)}</p>
-              <button 
-                className="add-to-cart"
-                onClick={() => addToCart(product, 1)}
-              >
-                <i className="fas fa-plus"></i> Agregar
-              </button>
-            </div>
-          ))}
-        </div>
-
-        <button 
-          className="slider-nav prev"
-          onClick={() => goTo(currentIndex - 1)}
-        >&lt;</button>
-        <button 
-          className="slider-nav next"
-          onClick={() => goTo(currentIndex + 1)}
-        >&gt;</button>
+    <section className="featured-section">
+      <div className="featured-header">
+        <h2 className="featured-title">Destacados</h2>
+        <Link to="/productos" className="featured-link">
+          Ver todos <span aria-hidden="true">→</span>
+        </Link>
       </div>
 
-      <div className="slider-dots">
-        {destacados.map((_, i) => (
-          <div 
-            key={i}
-            className={`slider-dot ${i === currentIndex ? 'active' : ''}`}
-            onClick={() => goTo(i)}
-          />
+      <div className="featured-scroll">
+        {destacados.map(product => (
+          <article key={product.id} className="featured-card">
+            <div className="featured-card-image">
+              <img
+                src={product.imagenes?.[0]}
+                alt={product.nombre}
+                loading="lazy"
+                onError={(e) => e.target.src = '/img/logo.png'}
+              />
+            </div>
+            <div className="featured-card-body">
+              <h3 className="featured-card-name">{product.nombre}</h3>
+              <p className="featured-card-price">{formatPrice(product.precio)}</p>
+              <button
+                className="featured-card-btn"
+                onClick={() => addToCart(product, 1)}
+                aria-label={`Agregar ${product.nombre} al carrito`}
+              >
+                <i className="fas fa-plus" aria-hidden="true"></i>
+                <span>Agregar</span>
+              </button>
+            </div>
+          </article>
         ))}
       </div>
     </section>
