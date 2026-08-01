@@ -7,7 +7,7 @@
   "categorias": [
     {
       "id": "personalizados",
-      "nombre": "Productos Personalizados",
+      "nombre": "Personalizados",
       "icono": "fa-palette",
       "descripcion": "Hechos a tu medida"
     },
@@ -18,7 +18,7 @@
       "descripcion": "Archivos editables e imprimibles"
     }
   ],
-  "destacados": [1, 102, 5, 3, 105],
+  "destacados": [1, 5, 3, 7, 4],
   "productos": [
     {
       "id": 1,

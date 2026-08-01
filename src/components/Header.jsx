@@ -24,7 +24,7 @@ export default function Header({ onCartClick }) {
         <nav>
           <ul className={mobileOpen ? 'active' : ''}>
             <li><Link to="/" className={isActive('/')} onClick={() => setMobileOpen(false)}><i className="fas fa-home"></i> Inicio</Link></li>
-            <li><Link to="/productos" className={isActive('/productos')} onClick={() => setMobileOpen(false)}><i className="fas fa-tags"></i> Productos Personalizados</Link></li>
+            <li><Link to="/productos" className={isActive('/productos')} onClick={() => setMobileOpen(false)}><i className="fas fa-tags"></i> Productos</Link></li>
 
           </ul>
         </nav>
