@@ -4,8 +4,9 @@ import Slider from '../components/Slider';
 import ProductCard from '../components/ProductCard';
 
 export default function Home({ onCartClick }) {
-  const { productos } = useStore();
-  const personalizados = productos.filter(p => p.categoria === 'all').slice(0, 4);
+  const { productos, config } = useStore();
+  const preview = productos.slice(0, 4);
+  const whatsappPhone = config.whatsapp?.replace('+', '') || '541125981292';
 
   return (
     <>
@@ -20,10 +21,10 @@ export default function Home({ onCartClick }) {
       {/* Productos personalizados preview */}
       <section className="products-section">
         <div className="section-title-wrap">
-          <h2 className="section-title">Productos Personalizados</h2>
+          <h2 className="section-title">Productos</h2>
         </div>
         <div className="products-grid">
-          {personalizados.map(product => (
+          {preview.map(product => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
@@ -45,10 +46,10 @@ export default function Home({ onCartClick }) {
       <section id="contacto" className="contact-section">
         <h2 className="section-title">Contáctanos</h2>
         <p>¡Escríbenos por WhatsApp!</p>
-        <a 
-          href="https://wa.me/+541125981292" 
+        <a
+          href={`https://wa.me/${whatsappPhone}`}
           className="cta-button whatsapp-btn"
-          target="_blank" 
+          target="_blank"
           rel="noopener noreferrer"
         >
           <i className="fab fa-whatsapp"></i> WhatsApp
