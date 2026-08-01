@@ -1,5 +1,5 @@
 import { useStore } from '../context/StoreContext';
-import { useState } from 'react';
+import SafeImage from './SafeImage';
 
 export default function ProductCard({ product, onOpenModal }) {
   const { addToCart, formatPrice } = useStore();
@@ -7,16 +7,15 @@ export default function ProductCard({ product, onOpenModal }) {
   return (
     <div className="product-card">
       <div className="product-image" onClick={() => onOpenModal(product)}>
-        <img 
-          src={product.imagenes?.[0]} 
+        <SafeImage
+          src={product.imagenes?.[0]}
           alt={product.nombre}
-          onError={(e) => e.target.src = '/img/logo.png'}
         />
       </div>
       <div className="product-info">
         <h3 className="product-title">{product.nombre}</h3>
         <p className="product-price-card">{formatPrice(product.precio)}</p>
-        <button 
+        <button
           className="add-to-cart"
           onClick={() => addToCart(product, 1)}
         >

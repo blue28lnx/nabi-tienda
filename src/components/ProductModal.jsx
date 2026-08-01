@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useStore } from '../context/StoreContext';
+import SafeImage from './SafeImage';
 
 export default function ProductModal({ product, onClose }) {
   const { addToCart, formatPrice } = useStore();
@@ -22,22 +23,21 @@ export default function ProductModal({ product, onClose }) {
         </div>
 
         <div className="main-image">
-          <img 
-            src={product.imagenes?.[selectedImage] || '/img/logo.png'} 
+          <SafeImage
+            src={product.imagenes?.[selectedImage]}
             alt={product.nombre}
-            onError={(e) => e.target.src = '/img/logo.png'}
           />
         </div>
 
         {product.imagenes?.length > 1 && (
           <div className="gallery-thumbnails">
             {product.imagenes.map((img, i) => (
-              <div 
+              <div
                 key={i}
                 className={`gallery-thumbnail ${i === selectedImage ? 'active' : ''}`}
                 onClick={() => setSelectedImage(i)}
               >
-                <img src={img} alt="" onError={(e) => e.target.src = '/img/logo.png'} />
+                <SafeImage src={img} alt="" />
               </div>
             ))}
           </div>
@@ -48,17 +48,17 @@ export default function ProductModal({ product, onClose }) {
         <div className="product-modal-price">{formatPrice(product.precio)}</div>
 
         <div className="quantity-selector">
-          <button 
+          <button
             className="quantity-btn"
             onClick={() => setQty(Math.max(1, qty - 1))}
           >-</button>
-          <input 
-            type="number" 
+          <input
+            type="number"
             className="quantity-input"
-            value={qty} 
+            value={qty}
             onChange={(e) => setQty(Math.max(1, parseInt(e.target.value) || 1))}
           />
-          <button 
+          <button
             className="quantity-btn"
             onClick={() => setQty(qty + 1)}
           >+</button>
