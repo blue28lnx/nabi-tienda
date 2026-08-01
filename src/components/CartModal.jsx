@@ -38,12 +38,12 @@ export default function CartModal({ isOpen, onClose }) {
 
             <div className="shipping-options">
               <label>¿Deseas envío?</label>
-              <select 
-                value={withShipping ? 'si' : 'no'} 
+              <select
+                value={withShipping ? 'si' : 'no'}
                 onChange={(e) => setWithShipping(e.target.value === 'si')}
               >
-                <option value="no">No</option>
-                <option value="si">Sí (+Cargo)</option>
+                <option value="no">No — retiro a coordinar</option>
+                <option value="si">Sí — a coordinar por WhatsApp</option>
               </select>
             </div>
 
@@ -54,11 +54,16 @@ export default function CartModal({ isOpen, onClose }) {
               </div>
               <div className="cart-summary-row">
                 <span>Envío:</span>
-                <span>{withShipping ? 'Sí' : 'No'}</span>
+                <span>{withShipping ? 'A coordinar' : 'No'}</span>
               </div>
-              <div className="cart-summary-row">
+              <div className="cart-summary-row total-row">
                 <span>Total:</span>
-                <span>{formatPrice(cartTotal)}</span>
+                <span>
+                  {withShipping
+                    ? <><strong>{formatPrice(cartTotal)}</strong> <small>+ envío</small></>
+                    : <strong>{formatPrice(cartTotal)}</strong>
+                  }
+                </span>
               </div>
             </div>
 
